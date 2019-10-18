@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Weather Dashboard</title>
+</head>
+
+<body class="body">
+  <div class="sidenav">
+    <h1 id="logo">Weather Search</h1>
+
+    <!-- This form will be where users input data about the movies -->
+    <form id="city-form">
+      <input type="text" id="city-input"><br>
+
+      <!-- This button will trigger our AJAX call -->
+      <input id="find-city" type="submit" value="Search by City">
+    </form>
+  </div>
+
+    <!-- We'll be dumping our JSON contents in here -->
+    <div class="main">
+      
+    <p id="weather-view"></p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      // This .on("click") function will trigger the AJAX Call
+      $("#find-city").on("click", function(event) {
+
+        // Preventing the submit button from trying to submit the form
+        // We're optionally using a form so the user may hit Enter to search instead of clicking the button
+        event.preventDefault();
+
+        // Here we grab the text from the input box
+        var city = $("#city-input").val();
+
+        var APIKey = "ef544c3962ea6eef3972eac908b270dc";
+
+        // Here we construct our URL
+        var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIKey;
+
+        // Write code between the dashes below to hit the queryURL with $ajax, then take the response data
+        // and display it in the div with an id of movie-view
+        $.ajax({
+         url: queryURL,
+         method: "GET"
+         }).then(function(response){
+         console.log(response);
+
+         $("#weather-view").text(JSON.stringify(response.city));
+         });
+
+        // YOUR CODE GOES IN THESE DASHES. DO NOT MANUALLY EDIT THE HTML ABOVE
+
+        // =================================================================
+
+        // CODE GOES HERE
+
+        // =================================================================
+      });
+    </script>
+  </div>
+</body>
+
+</html>
