@@ -2,16 +2,18 @@
     font-family: "Lato", sans-serif;
 }
 
-.sidenav {
+#cities {
     height: 100%;
     width: 160px;
     position: fixed;
+    color: white;
     z-index: 1;
     top: 0;
     left: 0;
     background-color: navy;
     overflow-x: hidden;
     padding-top: 20px;
+    border: solid 5px navy;
 }
 
 #logo {
@@ -20,11 +22,10 @@
     text-align: center;
 }
 
-.main {
-    margin-left: 160px; /* Same as the width of the sidenav */
-    font-size: 28px; /* Increased text to enable scrolling */
+#weather {
+    margin-left: 180px; /* Same as the width of the sidenav */
     padding: 0px 10px;
-  }
+}
 
 
 @media screen and (max-height: 450px) {
