@@ -30,7 +30,7 @@ var lastSearchedCity;
 
 
 // City Id seperated for a new call of city change
-var apiKey = "428bbab3989b31eb5f6dd40e0559cbeb";
+var apiKey = "ef544c3962ea6eef3972eac908b270dc";
 
 
   
