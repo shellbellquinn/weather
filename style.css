@@ -4,16 +4,16 @@
 
 #cities {
     height: 100%;
-    width: 160px;
+    width: 120px;
     position: fixed;
     color: white;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: navy;
+    background-color: rgb(3, 1, 65);
     overflow-x: hidden;
     padding-top: 20px;
-    border: solid 5px navy;
+    border: solid 5px rgb(3, 1, 65);
 }
 
 #logo {
@@ -23,9 +23,31 @@
 }
 
 #weather {
-    margin-left: 180px; /* Same as the width of the sidenav */
+    margin-left: 120px; /* Same as the width of the sidenav */
     padding: 0px 10px;
 }
+
+#heading{
+    display:flex;
+    text-align:center;
+  }
+
+
+#currentDay{
+    border-radius:3px;
+    padding: 10px;
+    border: 1px solid #dfdfdf;
+  }
+
+  #forcast .days div{
+    padding:5px;
+    background-color: rgb(81, 114, 187);
+    color:white;
+    border-radius:10px;
+    margin:5px;
+    text-align:center;
+    display: inline-block;
+  }
 
 
 @media screen and (max-height: 450px) {

@@ -104,7 +104,7 @@ var weatherUpdate = function(cityName, searched){
   if( localStorage.getItem("lastCitySearch")){
     weatherUpdate( localStorage.getItem("lastCitySearch"), false);
   }else{
-    weatherUpdate("Toronto", false);
+    weatherUpdate("Chicago", false);
   }
 
   $("#presetCities div").on( "click", function() {
